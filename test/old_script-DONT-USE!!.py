@@ -1,19 +1,31 @@
+# OLD SCRIPT DO NOT USE 
+# THIS IS FOR VIEWING HOW TO DO BETTER SECURITY
+# THIS SHOWS KNOWN ISSUES AND SHOULD NEVER NEVER BE USED EVER!!!
+
 import subprocess as sp
 import readline
 import os
-
+# OLD SCRIPT DO NOT USE 
+# THIS IS FOR VIEWING HOW TO DO BETTER SECURITY
+# THIS SHOWS KNOWN ISSUES AND SHOULD NEVER NEVER BE USED EVER!!!
 HISTFILE = os.path.expanduser("~/.mysh_history")
-
+# OLD SCRIPT DO NOT USE 
+# THIS IS FOR VIEWING HOW TO DO BETTER SECURITY
+# THIS SHOWS KNOWN ISSUES AND SHOULD NEVER NEVER BE USED EVER!!!
 if os.path.exists(HISTFILE):
     readline.read_history_file(HISTFILE)
-
+# OLD SCRIPT DO NOT USE 
+# THIS IS FOR VIEWING HOW TO DO BETTER SECURITY
+# THIS SHOWS KNOWN ISSUES AND SHOULD NEVER NEVER BE USED EVER!!!
 if os.name == "nt":  # Windows
     ls_cmd, clear_cmd = "dir", "cls"
     home, user = "USERPROFILE", "USERNAME"
 else:
     ls_cmd, clear_cmd = "ls", "clear"
     home, user = "HOME", "USER"
-
+# OLD SCRIPT DO NOT USE 
+# THIS IS FOR VIEWING HOW TO DO BETTER SECURITY
+# THIS SHOWS KNOWN ISSUES AND SHOULD NEVER NEVER BE USED EVER!!!
 
 while True:
     try:
@@ -21,7 +33,9 @@ while True:
         prompt = os.path.basename(os.getcwd())
         command = input(f"[{prompt}] mysh> ")
         commands = command.split()
-        
+        # OLD SCRIPT DO NOT USE 
+# THIS IS FOR VIEWING HOW TO DO BETTER SECURITY
+# THIS SHOWS KNOWN ISSUES AND SHOULD NEVER NEVER BE USED EVER!!!
         if not commands:
             continue
         if ">" in commands:
@@ -69,4 +83,7 @@ while True:
     except Exception as e:
         print(f"Error: {e}")
 
+# OLD SCRIPT DO NOT USE 
+# THIS IS FOR VIEWING HOW TO DO BETTER SECURITY
+# THIS SHOWS KNOWN ISSUES AND SHOULD NEVER NEVER BE USED EVER!!!
 readline.write_history_file(HISTFILE)
