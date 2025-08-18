@@ -31,7 +31,7 @@ A secure, cross-platform shell implementation in Python with built-in sanitizati
 
 1. Clone or download this repository
 2. Ensure you have Python 3.11 installed
-3. (Optional) Install `readline` for command history support:
+3. (**Optional**) Install `readline` for command history support:
    ```bash
    pip install readline
    ```
