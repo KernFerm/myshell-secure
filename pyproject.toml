@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=45", "wheel"]
+requires = ["setuptools>=80.9.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -47,13 +47,13 @@ windows = [
     "pyreadline3>=3.4.0; sys_platform=='win32'"
 ]
 dev = [
-    "pytest>=7.0.0",
-    "pytest-cov>=4.0.0",
-    "black>=22.0.0",
-    "flake8>=5.0.0",
-    "mypy>=1.0.0",
-    "bandit>=1.7.0",
-    "safety>=2.0.0"
+    "pytest>=8.4.1",        # June 18, 2025
+    "pytest-cov>=6.2.1",    # June 12, 2025
+    "black>=25.1.0",        # Jan 29, 2025
+    "flake8>=7.3.0",        # Jun 20, 2025
+    "mypy>=1.17.1",         # Jul 31, 2025
+    "bandit>=1.8.6",        # Jul 6, 2025
+    "safety>=3.6.0"         # Jul 9, 2025
 ]
 docs = [
     "sphinx>=5.0.0",
@@ -64,7 +64,7 @@ docs = [
 "Homepage" = "https://github.com/KernFerm/myshell-secure/tree/main"
 "Documentation" = "https://github.com/KernFerm/myshell-secure/blob/main/README.md"
 "Repository" = "https://github.com/KernFerm/myshell-secure"
-"Bug Tracker" = "https://github.com/KernFerm/myshell-secureissues"
+"Bug Tracker" = "https://github.com/KernFerm/myshell-secure/issues"
 "Security" = "https://github.com/KernFerm/myshell-secure/blob/main/SECURITY.md"
 
 [project.scripts]
@@ -77,14 +77,13 @@ py-modules = ["main", "test_shell"]
 where = ["."]
 include = ["*.py"]
 
-# Black code formatting configuration
+# Black formatting
 [tool.black]
 line-length = 88
 target-version = ['py311']
 include = '\.pyi?$'
 extend-exclude = '''
 /(
-  # directories
   \.eggs
   | \.git
   | \.hg
@@ -96,7 +95,7 @@ extend-exclude = '''
 )/
 '''
 
-# MyPy type checking configuration
+# MyPy type checking
 [tool.mypy]
 python_version = "3.11"
 warn_return_any = true
@@ -112,7 +111,7 @@ warn_no_return = true
 warn_unreachable = true
 strict_equality = true
 
-# Pytest configuration
+# Pytest config
 [tool.pytest.ini_options]
 testpaths = ["."]
 python_files = ["test_*.py", "*_test.py"]
@@ -132,7 +131,7 @@ markers = [
     "slow: marks tests as slow (deselect with '-m \"not slow\"')"
 ]
 
-# Coverage configuration
+# Coverage
 [tool.coverage.run]
 source = ["."]
 omit = [
@@ -155,14 +154,12 @@ exclude_lines = [
     "if __name__ == .__main__.:"
 ]
 
-# Bandit security linting configuration
+# Bandit
 [tool.bandit]
 exclude_dirs = ["tests", "test_*"]
-skips = ["B101"]  # Skip assert_used test
+skips = ["B101"]
 
-# Flake8 configuration (in setup.cfg format, as flake8 doesn't support pyproject.toml yet)
-# Note: Create a separate .flake8 or setup.cfg file for flake8 configuration
-
+# isort aligned with Black
 [tool.isort]
 profile = "black"
 multi_line_output = 3
