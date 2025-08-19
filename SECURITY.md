@@ -61,7 +61,7 @@ If you discover a security vulnerability in MyShell, please report it responsibl
 
 1. **DO NOT** create a public GitHub issue for security vulnerabilities  
 2. Contact the maintainers privately through one of these methods:  
-   - Email: [contact@fnbubbles420.org](mailto:contact@fnbubbles420.org)  
+   - Email: [securitygithubissue@fnbubbles420.org](mailto:securitygithubissue@fnbubbles420.org)  
    - Create a private security advisory on GitHub  
    - Direct message to project maintainers  
 
@@ -111,3 +111,4 @@ When reporting a vulnerability, please include:
 The project includes comprehensive security tests:
 ```bash
 python test_shell.py
+
