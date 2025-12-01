@@ -2,6 +2,11 @@
 
 A secure, cross-platform shell implementation in Python with built-in sanitization features to prevent common security vulnerabilities.
 
+# Join the discord if you need help 
+
+[https://fnbubbles420.org/discordinvite](https://fnbubbles420.org/discordinvite)
+
+
 ## Features
 
 ### Security Features
